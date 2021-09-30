@@ -1,3 +1,8 @@
 .heading{
     background-color: aqua;
 }
+
+#button{
+    border-radius: 1rem;
+    background-color: aqua;
+}

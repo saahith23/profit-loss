@@ -6,31 +6,29 @@ var output = document.querySelector("#output");
 
 submitBtn.addEventListener('click', submitHandler);
 
-function submitHandler(){
-    var ip= Number(initialPrice.value);
-    var qty=Number( stocksQuantity.value);
-    var cp= Number(currentPrice.value);
+function submitHandler() {
+    var ip = Number(initialPrice.value);
+    var qty = Number(stocksQuantity.value);
+    var cp = Number(currentPrice.value);
 
-    calculateProfitAndLoss(ip, qty,cp);
+    calculateProfitAndLoss(ip, qty, cp);
 }
 
-function calculateProfitAndLoss(initial,quantity, current)
-{
-    if(initial > current){
-var loss =(initial - current)*quantity;
-var lossPercentage = (loss/initial)*100;
+function calculateProfitAndLoss(initial, quantity, current) {
+    if (initial > current) {
+        var loss = (initial - current) * quantity;
+        var lossPercentage = (loss / initial) * 100;
 
-showOutput('h}${}')
-    } 
-    else if(current > initial){
-var profit = (current - initial)*quantity;
-var profitPercentage= (profit/initial)*100;
-showOutput('h}${}jhgibk')
-    }
-    else{
-showOutput('..')
+        showOutput('h}${}')
+    } else if (current > initial) {
+        var profit = (current - initial) * quantity;
+        var profitPercentage = (profit / initial) * 100;
+        showOutput('Profit')
+    } else {
+        showOutput('loss')
     }
 }
-function showOutput(message){
-output.innerHTML = message;
+
+function showOutput(message) {
+    output.innerHTML = message;
 }
